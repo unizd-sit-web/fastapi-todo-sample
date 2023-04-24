@@ -7,7 +7,6 @@ import motor.motor_asyncio
 from fastapi.encoders import jsonable_encoder
 
 async def init_db():
-    ##export MONGODB_URL="mongodb+srv://app:gDPy7cvkeMXbGRK@demo.x69ao9e.mongodb.net/?retryWrites=true&w=majority"
     mongodb_client = motor.motor_asyncio.AsyncIOMotorClient(os.environ["MONGODB_URL"])
     global db
     db = mongodb_client.tododb_v2
